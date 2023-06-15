@@ -78,7 +78,7 @@ export default function Calculator() {
         </div>
 
         <div className="text-sm">
-          <p>Note: if you don't enter a number, the default values for both numbers are 1.</p>
+          <p>Note: if you do not enter a number, the default values for both numbers are 1.</p>
         </div>
 
         <div className="grid gap-6 mb-6 md:grid-cols-2">
