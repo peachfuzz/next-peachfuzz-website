@@ -1,15 +1,25 @@
+'use client';
+import { usePathname } from 'next/navigation';
 import { ExternalLink, InternalLink } from './links';
 import { IconToolTip } from './iconToolTip';
 import { GitHubIcon, InstagramIcon, LinkedInIcon } from './icons/socialMediaIcons';
 import { IconText } from '../components/icons/iconText';
 import { CodeBracketSquareIcon } from '../components/icons/heroIcons';
-import Link from 'next/link';
+import { getCodeUrl } from '../utils/utils';
 
 export function Footer() {
+  const pathName = usePathname();
   return (
     <>
       <div className="">
-        <IconText sectionOne={<p>Take a look at the code</p>} sectionTwo={<CodeBracketSquareIcon width="25px" />} />
+        <IconText
+          sectionOne={
+            <p>
+              Take a look at <ExternalLink href={getCodeUrl(pathName)} label="the code" />
+            </p>
+          }
+          sectionTwo={<CodeBracketSquareIcon width="25px" />}
+        />
       </div>
       {/* todo: add line */}
       <footer className="sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8">
