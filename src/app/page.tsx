@@ -4,7 +4,7 @@ import { IconText } from './components/icons/iconText';
 
 export default function Home() {
   return (
-    <main className="profile-page">
+    <main className="mt-60">
       {/* todo: get background image to display */}
       <section className="relative block h-500-px">
         <div
