@@ -23,7 +23,7 @@ export function Table({ data, heading }: { data: Entry[]; heading: string[] }) {
                 {data.map((entry: Entry, index: number) => (
                   <tr
                     // todo: change alternating background colors
-                    className="dark:border-neutral-500 dark:bg-neutral-700 even:bg-neutral-700 odd:bg-neutral-600"
+                    className=" dark:border-neutral-500 dark:bg-neutral-700 even:bg-slate-200 dark:even:bg-neutral-700 dark:odd:bg-neutral-600"
                     key={index}
                   >
                     <td className="whitespace-nowrap px-6 py-4 font-medium">{entry.quotient}</td>

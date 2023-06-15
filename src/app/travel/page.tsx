@@ -17,7 +17,8 @@ export default function Travel() {
   };
 
   return (
-    <main className="mb-auto flex flex-col items-center p-24">
+    <main className="mb-auto flex flex-col items-center p-6">
+      <h1 className="text-5xl">Travel</h1>
       <Map stateData={updatedStateData} onHover={updateStateData} />
       <p>States visited: {stateData.reduce((acc, cur) => (cur.visited ? ++acc : acc), 0)}</p>
       <MapLegend stateData={updatedStateData} updateStateData={updateStateData} />
