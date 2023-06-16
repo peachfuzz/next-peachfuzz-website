@@ -1,5 +1,5 @@
 'use client';
-import { usaData, mexicoData } from './data/mapData';
+import { usaData, mexicoData, australiaData } from './data/mapData';
 import { Country } from './country';
 
 export default function Travel() {
@@ -14,7 +14,10 @@ export default function Travel() {
         }
       />
       {/* todo: figure out how to get capital */}
+      {/* todo: center content */}
       <Country data={mexicoData} name="Mexico" capitalLocation={<></>} />
+      {/* todo: fix styling */}
+      <Country data={australiaData} name="Australia" capitalLocation={<></>} />
     </main>
   );
 }

@@ -23,7 +23,7 @@ export function Country({
 
   return (
     <>
-      <div>{name}</div>
+      <div className="mt-6 text-3xl">{name}</div>
       <Map countryData={updatedCountryData} onHover={updateStateData} capitalLocation={capitalLocation} />
       <p>States visited: {data.reduce((acc, cur) => (cur.visited ? ++acc : acc), 0)}</p>
       <MapLegend countryData={updatedCountryData} onHover={updateStateData} />
