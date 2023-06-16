@@ -1,27 +1,20 @@
 'use client';
-import { useState } from 'react';
-import { Map } from '../components/map';
-import { stateData } from '../data/mapData';
-import { UpdatedMapEntry } from '../types/mapDataTypes';
-import { MapLegend } from '../components/mapLegend';
+import { usaData, mexicoData } from './data/mapData';
+import { Country } from './country';
 
 export default function Travel() {
-  const [updatedStateData, setUpdatedStateData] = useState<UpdatedMapEntry[]>(stateData);
-
-  // todo: rename function name
-  const updateStateData = (index: number) => {
-    const newHoveredValue = !updatedStateData[index].hovered;
-    let newStateData = [...updatedStateData];
-    newStateData[index].hovered = newHoveredValue;
-    setUpdatedStateData(newStateData);
-  };
-
   return (
     <main className="mb-auto flex flex-col items-center p-6">
       <h1 className="text-5xl">Travel</h1>
-      <Map stateData={updatedStateData} onHover={updateStateData} />
-      <p>States visited: {stateData.reduce((acc, cur) => (cur.visited ? ++acc : acc), 0)}</p>
-      <MapLegend stateData={updatedStateData} updateStateData={updateStateData} />
+      <Country
+        data={usaData}
+        name="USA"
+        capitalLocation={
+          <circle id="DC" fill="#037ffc" stroke="#000000" strokeWidth="1.5" cx="801.3" cy="251.8" r="5" />
+        }
+      />
+      {/* todo: figure out how to get capital */}
+      <Country data={mexicoData} name="Mexico" capitalLocation={<></>} />
     </main>
   );
 }
