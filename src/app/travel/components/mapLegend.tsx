@@ -1,5 +1,5 @@
-import { UpdatedMapEntry } from '../types/mapDataTypes';
-import { getColor } from '../utils/utils';
+import { UpdatedMapEntry } from '../../types/mapDataTypes';
+import { getColor } from '../../utils/utils';
 
 export function MapLegend({
   countryData,
@@ -8,10 +8,8 @@ export function MapLegend({
   countryData: UpdatedMapEntry[];
   onHover: (index: number) => void;
 }) {
-  /* todo: by cols - grid-rows-10 */
-  /* todo: by rows - grid-cols-5 */
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-5 gap-4">
+    <div className="grid grid-flow-row-dense grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 text-center">
       {countryData.map(({ name, abbreviation, hovered, visited }, index) => (
         <div
           data-state={abbreviation}

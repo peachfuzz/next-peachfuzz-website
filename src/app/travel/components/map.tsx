@@ -1,20 +1,21 @@
-import { UpdatedMapEntry } from '../types/mapDataTypes';
-import { getColor } from '../utils/utils';
+import { UpdatedMapEntry } from '../../types/mapDataTypes';
+import { getColor } from '../../utils/utils';
 
 export function Map({
   countryData,
   onHover,
   capitalLocation = <></>,
+  viewBox,
 }: {
   countryData: UpdatedMapEntry[];
   onHover: (index: number) => void;
   capitalLocation?: JSX.Element;
+  viewBox: string;
 }) {
   return (
-    <div className="w-11/12 md:w-8/12 lg:w-6/12 xl:w-4/12">
-      <svg viewBox="0 0 959 593" className="svg-states">
-        <title>U.S. States</title>
-        <g id="states">
+    <div className="w-2/3">
+      <svg height="100%" viewBox={viewBox}>
+        <g>
           {countryData.map(({ abbreviation, d, hovered, visited }, index) => (
             <path
               id={abbreviation}
