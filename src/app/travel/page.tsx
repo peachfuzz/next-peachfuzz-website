@@ -1,6 +1,6 @@
 'use client';
 import { usaData, mexicoData, australiaData, colombiaData, canadaData } from './data/mapData';
-import { Country } from './country';
+import { Country } from './components/country';
 
 export default function Travel() {
   return (

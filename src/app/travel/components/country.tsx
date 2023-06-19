@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { Map } from './components/map';
-import { UpdatedMapEntry } from '../types/mapDataTypes';
-import { MapLegend } from './components/mapLegend';
+import { Map } from './map';
+import { UpdatedMapEntry } from '../../types/mapDataTypes';
+import { MapLegend } from './mapLegend';
 
 export function Country({
   data,
