@@ -5,7 +5,3 @@ export const getColor = (hovered: boolean | undefined, visited: boolean) => {
   }
   return visited ? '#037ffc' : '#D3D3D3';
 };
-
-export const getCodeUrl = (pathName: string) => {
-  return `https://github.com/peachfuzz/next-peachfuzz-website/tree/main/src/app${pathName}/page.tsx`;
-};

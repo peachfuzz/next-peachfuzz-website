@@ -5,7 +5,10 @@ import { IconToolTip } from './iconToolTip';
 import { GitHubIcon, InstagramIcon, LinkedInIcon } from './icons/socialMediaIcons';
 import { IconText } from '../components/icons/iconText';
 import { CodeBracketSquareIcon } from '../components/icons/heroIcons';
-import { getCodeUrl } from '../utils/utils';
+
+const getCodeUrl = (pathName: string) => {
+  return `https://github.com/peachfuzz/next-peachfuzz-website/tree/main/src/app${pathName}/page.tsx`;
+};
 
 export function Footer() {
   const pathName = usePathname();
