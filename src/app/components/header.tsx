@@ -33,7 +33,6 @@ const getLinks = (cssClasses: string, pathName: string) => (
         className={`${getLinkTypeClassName(data.pathName, pathName)} ${cssClasses}`}
         href={data.pathName}
         key={data.pathName}
-        replace
       >
         {data.pageName}
       </Link>
