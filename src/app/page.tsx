@@ -3,6 +3,9 @@ import { AcademicCapIcon, BriefcaseIcon, MapPinIcon } from './components/icons/h
 import { IconText } from './components/icons/iconText';
 
 export default function Home() {
+  const text = `Welcome to my slice of the internet. I have worked professionally as a Software Engineer for ${
+    new Date().getFullYear() - 2018
+  }+ years. Please reach out on LinkedIn for a copy of my resume.`;
   return (
     <main className="mt-60">
       <section className=" py-16 bg-blueGray-200">
@@ -15,8 +18,8 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="text-center mt-12">
-                <h1 className="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">Hector</h1>
+              <div className="text-center mt-12 space-y-4">
+                <h1 className="text-4xl font-semibold leading-normal text-blueGray-700">Hector</h1>
 
                 <IconText sectionOne={<MapPinIcon width="25px" />} sectionTwo={<p>Seattle, Washington</p>} />
                 <IconText sectionOne={<BriefcaseIcon width="25px" />} sectionTwo={<p>Software Engineer</p>} />
@@ -25,13 +28,12 @@ export default function Home() {
                   sectionTwo={<p>Seattle Pacific University</p>}
                 />
               </div>
-              <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
+              <div className="mt-10 py-10 text-center">
                 <div className="flex flex-wrap justify-center">
                   <div className="w-full lg:w-9/12 px-4">
                     <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
                       {/* todo: add more text */}
-                      Welcome to my slice of the internet. I have worked professionally as a Software Engineer for{' '}
-                      {new Date().getFullYear() - 2018}+ years.
+                      {text}
                     </p>
                   </div>
                 </div>

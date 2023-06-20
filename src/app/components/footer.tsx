@@ -21,15 +21,7 @@ export function Footer() {
           sectionTwo={<CodeBracketSquareIcon width="25px" />}
         />
       </div>
-      {/* todo: add line */}
       <footer className="sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8">
-        {/* todo: add link to code once everything is done and published */}
-        {/* todo: make link stay sticky to bottom */}
-        {/* <p className="mb-4 text-sm text-center sm:mb-0">
-          This website was made with <ExternalLink href="https://nextjs.org" label="Next.js" />, styled with{' '}
-          <ExternalLink href="https://tailwindcss.com" label="Tailwind CSS" /> and hosted on{' '}
-          <ExternalLink href="https://pages.github.com" label="Github Pages" />.
-        </p> */}
         <div className="mb-4 text-sm text-center sm:mb-0 select-none">
           This page was made with <ExternalLink href="https://nextjs.org" label="Next.js" />. Click{' '}
           <InternalLink href="/blueprint" label="here" /> to learn more!
