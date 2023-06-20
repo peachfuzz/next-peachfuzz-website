@@ -18,9 +18,9 @@ export default function Blueprint() {
   return (
     <main className="mb-auto flex flex-col items-center p-6 md:p-24">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <LogoSection logo={<NextJsIcon />} message="Build with Next.js" />
+        <LogoSection logo={<NextJsIcon />} message="Built with Next.js" />
         <LogoSection logo={<TailwindCssIcon />} message="Styled with Tailwind CSS" />
-        <LogoSection logo={<VercelIcon />} message="Website hosted on Vercel" />
+        <LogoSection logo={<VercelIcon />} message="Hosted on Vercel" />
         <LogoSection logo={<TypeScriptIcon />} message="Typed with TypeScript" />
         <LogoSection logo={<GitHubIcon />} message="Code stored on GitHub" />
         <LogoSection logo={<GitIcon />} message="Code managed with Git" />
