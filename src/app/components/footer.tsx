@@ -7,12 +7,12 @@ import { IconText } from '../components/icons/iconText';
 import { CodeBracketSquareIcon } from '../components/icons/heroIcons';
 
 const getCodeUrl = (pathName: string) => {
-  return `https://github.com/peachfuzz/next-peachfuzz-website/tree/main/src/app${pathName}/page.tsx`;
+  return `github.com/peachfuzz/next-peachfuzz-website/tree/main/src/app${pathName}/page.tsx`;
 };
 
 export function Footer() {
   const pathName = usePathname();
-  const externalLink = <ExternalLink href="https://nextjs.org" label="Next.js" />;
+  const externalLink = <ExternalLink href="nextjs.org" label="Next.js" />;
   const internalLink = <InternalLink href="/blueprint" label="here" />;
   return (
     <>
@@ -28,7 +28,7 @@ export function Footer() {
       </div>
       <footer className="sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8">
         <div className="mb-4 text-sm text-center sm:mb-0 select-all">
-          This page was made with {externalLink}. Click {internalLink} to learn more!
+          This website was built with {externalLink}. Click {internalLink} to learn more!
         </div>
         <div className="flex justify-center items-center space-x-1">
           <IconToolTip

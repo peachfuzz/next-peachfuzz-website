@@ -73,7 +73,7 @@ export default function Calculator() {
           <p>
             The Euclidean algorithm is used for calculating the Greatest Common Multiple. You can also calculate the
             Least Common Multiple. Learn more about the{' '}
-            <ExternalLink href="https://en.wikipedia.org/wiki/Euclidean_algorithm" label="Euclidean Algorithm here" />.
+            <ExternalLink href="en.wikipedia.org/wiki/Euclidean_algorithm" label="Euclidean Algorithm here" />.
           </p>
         </div>
 
