@@ -1,11 +1,15 @@
 'use client';
 import { usaData, mexicoData, australiaData, colombiaData, canadaData } from './data/mapData';
 import { Country } from './components/country';
+import { RocketLaunchIcon } from '../components/icons/heroIcons';
 
 export default function Travel() {
   return (
-    <main className="mb-auto flex flex-col items-center p-6">
-      <h1 className="text-5xl">Travel</h1>
+    <main className="mb-auto flex flex-col items-center p-6 md:p-24">
+      <div className="flex space-x-2">
+        <h1 className="text-5xl">Travel</h1>
+        <RocketLaunchIcon width="55px" />
+      </div>
       <Country
         data={usaData}
         name="USA"
