@@ -1,7 +1,7 @@
 export type MapEntry = {
   name: string;
   abbreviation: string;
-  d: string;
+  drawing: string;
   visited: boolean;
 };
 

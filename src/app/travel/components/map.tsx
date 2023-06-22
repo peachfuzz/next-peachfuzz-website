@@ -16,11 +16,11 @@ export function Map({
     <div className="w-2/3">
       <svg height="100%" viewBox={viewBox}>
         <g>
-          {countryData.map(({ abbreviation, d, hovered, visited }, index) => (
+          {countryData.map(({ abbreviation, drawing, hovered, visited }, index) => (
             <path
               id={abbreviation}
               fill={getColor(hovered, visited)}
-              d={d}
+              d={drawing}
               onMouseEnter={() => onHover(index)}
               onMouseLeave={() => onHover(index)}
               key={abbreviation}
