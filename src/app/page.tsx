@@ -14,7 +14,7 @@ export default function Home() {
             <div className="px-6">
               <div className="flex flex-wrap justify-center">
                 <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-                  <Image src="/hector.JPEG" alt="Hector at Dumbo" width={300} height={400} priority />
+                  <Image src="/hector-2.0.JPEG" alt="Hector at Dumbo" width={300} height={400} priority />
                 </div>
               </div>
 
