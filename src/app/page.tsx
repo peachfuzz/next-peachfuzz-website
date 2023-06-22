@@ -28,7 +28,7 @@ export default function Home() {
                   sectionTwo={<p>Seattle Pacific University</p>}
                 />
               </div>
-              <div className="mt-10 py-10 text-center">
+              <div className="py-10 text-center">
                 <div className="flex flex-wrap justify-center">
                   <div className="w-full lg:w-9/12 px-4">
                     <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
