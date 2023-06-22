@@ -40,7 +40,7 @@ export function TypeScriptIcon() {
 
 export function VercelIcon() {
   return BlueprintIconWrapper(<path d="M37.5896 0.25L74.5396 64.25H0.639648L37.5896 0.25Z" fill="#fff" />, {
-    viewBox: '0 0 74 64',
+    viewBox: '0 0 74 74',
   });
 }
 
