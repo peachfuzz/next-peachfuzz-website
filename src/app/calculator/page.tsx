@@ -39,7 +39,7 @@ export default function Calculator() {
       entries.push({ quotient, remainder });
       index++;
     }
-    const gcd = index === 0 ? Math.max(firstCalculation, secondCalculation) : entries[index - 1].remainder;
+    const gcd = index === 0 ? Math.min(firstCalculation, secondCalculation) : entries[index - 1].remainder;
     return {
       entries,
       gcd,
