@@ -71,7 +71,7 @@ export default function Calculator() {
             <CalculatorIcon width="55px" />
           </div>
           <p>
-            The Euclidean algorithm is used for calculating the Greatest Common Multiple. You can also calculate the
+            The Euclidean algorithm is used for calculating the Greatest Common Divisor. You can also calculate the
             Least Common Multiple. Learn more about the{' '}
             <ExternalLink href="en.wikipedia.org/wiki/Euclidean_algorithm" label="Euclidean Algorithm here" />.
           </p>
