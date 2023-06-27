@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 const focusedLinkClassName = 'bg-gray-900 text-white rounded-md px-3 py-2 font-medium';
 const unfocusedLinkClassName = 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium';
@@ -41,27 +42,34 @@ const getLinks = (cssClasses: string, pathName: string) => (
 );
 
 export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathName = usePathname();
+
+  const getMenuClassName = (opposite = false) => {
+    if (opposite) {
+      return mobileMenuOpen ? 'block' : 'hidden';
+    }
+    return mobileMenuOpen ? 'hidden' : 'block';
+  };
+
   return (
     <nav className="bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* <!-- Mobile menu button--> */}
-            {/* todo: get open/close to work for mobile menu */}
             <button
               type="button"
               className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
+              onClick={() => {
+                setMobileMenuOpen(!mobileMenuOpen);
+              }}
             >
               <span className="sr-only">Open main menu</span>
-              {/* <!--
-                        Icon when menu is closed.
-                        Menu open: "hidden", Menu closed: "block"
-                    --> */}
               <svg
-                className="block h-6 w-6"
+                className={`${getMenuClassName()} h-6 w-6`}
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
@@ -70,12 +78,8 @@ export function Header() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
-              {/* <!--
-                        Icon when menu is open.
-                        Menu open: "block", Menu closed: "hidden"
-                    --> */}
               <svg
-                className="hidden h-6 w-6"
+                className={`${getMenuClassName(true)} h-6 w-6`}
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
@@ -113,9 +117,12 @@ export function Header() {
       </div>
 
       {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-      <div className="sm:hidden" id="mobile-menu">
-        <div className="space-y-1 px-2 pb-3 pt-2">{getLinks('text-base block', pathName)}</div>
-      </div>
+
+      {mobileMenuOpen && (
+        <div className="sm:hidden" id="mobile-menu">
+          <div className="space-y-1 px-2 pb-3 pt-2">{getLinks('text-base block', pathName)}</div>
+        </div>
+      )}
     </nav>
   );
 }
