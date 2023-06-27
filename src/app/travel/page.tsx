@@ -15,7 +15,7 @@ export default function Travel() {
         name="USA"
         viewBox="5 0 930 600"
         capitalLocation={
-          <circle id="DC" fill="#037ffc" stroke="#000000" strokeWidth="1.5" cx="801.3" cy="251.8" r="5" />
+          <circle id="DC" className="fill-blue-500" stroke="#000000" strokeWidth="1.5" cx="801.3" cy="251.8" r="5" />
         }
       />
       {/* todo: figure out how to get capital */}
@@ -23,6 +23,8 @@ export default function Travel() {
       <Country data={australiaData} name="Australia" viewBox="-150 -5 800 430" />
       <Country data={canadaData} name="Canada" viewBox="0 30 780 480" />
       <Country data={colombiaData} name="Colombia" viewBox="-400 100 2000 1050" />
+      {/* todo: figure out how we can avoid losing CSS to tailwind purge */}
+      <div className="fill-amber-500 text-amber-500 text-blue-500"></div>
     </main>
   );
 }
