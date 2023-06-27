@@ -21,8 +21,7 @@ export function MapLegend({
           key={abbreviation}
           onMouseEnter={() => onHover(index)}
           onMouseLeave={() => onHover(index)}
-          style={{ color: getColor(hovered, visited) }}
-          className="max-w-min text-center"
+          className={`text-${getColor(hovered, visited)} max-w-min text-center`}
         >
           {name}
         </div>
