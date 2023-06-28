@@ -13,10 +13,10 @@ export default function Countries() {
         }
       />
       {/* todo: figure out how to get capital */}
-      <Country data={mexicoData} name="Mexico" viewBox="0 0 1000 640" />
+      <Country data={mexicoData} name="Mexico" viewBox="0 0 1000 640" translate={true} />
       <Country data={australiaData} name="Australia" viewBox="-150 -5 800 430" />
       <Country data={canadaData} name="Canada" viewBox="0 30 780 480" />
-      <Country data={colombiaData} name="Colombia" viewBox="-400 100 2000 1050" />
+      <Country data={colombiaData} name="Colombia" viewBox="-400 100 2000 1050" translate={true} />
     </>
   );
 }

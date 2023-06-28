@@ -9,11 +9,13 @@ export function Country({
   name,
   capitalLocation = <></>,
   viewBox,
+  translate = false,
 }: {
   data: UpdatedMapEntry[];
   name: string;
   capitalLocation?: JSX.Element;
   viewBox: string;
+  translate?: boolean;
 }) {
   const [updatedCountryData, setUpdatedCountryData] = useState<UpdatedMapEntry[]>(data);
 
@@ -25,7 +27,7 @@ export function Country({
   };
 
   return (
-    <div className="mt-6 flex flex-col items-center space-y-4">
+    <div className="mt-6 flex flex-col items-center space-y-4" translate={translate ? 'yes' : 'no'}>
       <div className="mt-6 text-3xl">{name}</div>
       <Map
         countryData={updatedCountryData}
