@@ -8,7 +8,9 @@ export default function Travel() {
   return (
     <main className="mb-auto flex flex-col items-center p-6 md:p-24">
       <div className="flex space-x-2">
-        <h1 className="text-5xl">Travel</h1>
+        <h1 className="text-5xl" translate="no">
+          Travel
+        </h1>
         <RocketLaunchIcon width="55px" />
       </div>
       <Countries />
