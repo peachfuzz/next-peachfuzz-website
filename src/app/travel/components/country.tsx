@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { Map } from './map';
 import { UpdatedMapEntry } from '../../types/mapDataTypes';

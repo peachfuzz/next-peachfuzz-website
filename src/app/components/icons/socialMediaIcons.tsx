@@ -1,4 +1,3 @@
-'use client';
 import { SocialMediaIconWrapper } from './iconWrapper';
 
 export function GitHubIcon() {
