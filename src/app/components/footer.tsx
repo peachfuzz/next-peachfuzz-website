@@ -16,7 +16,7 @@ export function Footer() {
   const internalLink = <InternalLink href="/blueprint" label="here" />;
   return (
     <>
-      <div className="">
+      <div>
         <IconText
           sectionOne={
             <p>

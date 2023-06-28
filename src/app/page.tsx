@@ -18,7 +18,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-12 space-y-4 text-center">
+              <div className="mt-10 space-y-4 text-center">
                 <h1 className="text-blueGray-700 text-4xl font-semibold leading-normal">Hector</h1>
 
                 <IconText sectionOne={<MapPinIcon width="25px" />} sectionTwo={<p>Seattle, Washington</p>} />
