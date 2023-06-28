@@ -64,7 +64,7 @@ export function Header() {
               aria-controls="mobile-menu"
               aria-expanded="false"
               onClick={() => {
-                setMobileMenuOpen(!mobileMenuOpen);
+                setMobileMenuOpen((m) => !m);
               }}
             >
               <span className="sr-only">Open main menu</span>

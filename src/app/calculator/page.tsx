@@ -84,12 +84,12 @@ export default function Calculator() {
         <div className="grid gap-6 mb-6 md:grid-cols-2">
           <NumberInput id="number_one" label="Number ☝🏽" value={numberOne} onChange={setNumberOne} />
           <NumberInput id="number_two" label="Number ✌🏽" value={numberTwo} onChange={setNumberTwo} />
-          <Toggle id="show_table" label="Show table" checked={showTable} onChange={() => setShowTable(!showTable)} />
+          <Toggle id="show_table" label="Show table" checked={showTable} onChange={() => setShowTable((t) => !t)} />
           <Toggle
             id="calculate_lcm"
             label="Calculate Least Common Multiple"
             checked={showLCM}
-            onChange={() => setShowLCM(!showLCM)}
+            onChange={() => setShowLCM((l) => !l)}
           />
           {/* todo: checkbox that enables "render table without button, just render whatever is in the text boxes" */}
         </div>
