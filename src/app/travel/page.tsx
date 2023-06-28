@@ -24,7 +24,7 @@ export default function Travel() {
       <Country data={canadaData} name="Canada" viewBox="0 30 780 480" />
       <Country data={colombiaData} name="Colombia" viewBox="-400 100 2000 1050" />
       {/* todo: figure out how we can avoid losing CSS to tailwind purge */}
-      <div className="fill-amber-500 text-amber-500 text-blue-500"></div>
+      <div className="bg-amber-500 bg-blue-500 fill-amber-500 text-amber-500 text-blue-500"></div>
     </main>
   );
 }
