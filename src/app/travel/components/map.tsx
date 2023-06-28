@@ -19,7 +19,7 @@ export function Map({
           {countryData.map(({ abbreviation, drawing, hovered, visited }, index) => (
             <path
               id={abbreviation}
-              className={`fill-${getColor(hovered, visited)}`}
+              className={`fill-${getColor(hovered, visited)} stroke-black`}
               d={drawing}
               onMouseEnter={() => onHover(index)}
               onMouseLeave={() => onHover(index)}
