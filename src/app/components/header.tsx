@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-const focusedLinkClassName = 'bg-gray-900 text-white rounded-md px-3 py-2 font-medium';
-const unfocusedLinkClassName = 'text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 font-medium';
+const focusedLinkClassName = 'bg-blue-300 dark:bg-gray-900 dark:text-white';
+const unfocusedLinkClassName = 'hover:bg-gray-400 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white';
 const getLinkTypeClassName = (path: string, pathName: string) =>
   path === pathName ? focusedLinkClassName : unfocusedLinkClassName;
 
@@ -31,7 +31,7 @@ const getLinks = (cssClasses: string, pathName: string) => (
   <>
     {linkData.map((data) => (
       <Link
-        className={`${getLinkTypeClassName(data.pathName, pathName)} ${cssClasses}`}
+        className={`${getLinkTypeClassName(data.pathName, pathName)} ${cssClasses} rounded-md px-3 py-2 font-medium`}
         href={data.pathName}
         key={data.pathName}
       >
@@ -53,7 +53,7 @@ export function Header() {
   };
 
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-slate-200 dark:bg-gray-950">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
