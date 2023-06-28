@@ -26,11 +26,11 @@ export function Footer() {
           sectionTwo={<CodeBracketSquareIcon width="25px" />}
         />
       </div>
-      <footer className="sm:flex sm:items-center sm:justify-between p-4 sm:p-6 xl:p-8">
-        <div className="mb-4 text-sm text-center sm:mb-0 select-all">
+      <footer className="p-4 sm:flex sm:items-center sm:justify-between sm:p-6 xl:p-8">
+        <div className="mb-4 select-all text-center text-sm sm:mb-0">
           This website was built with {externalLink}. Click {internalLink} to learn more!
         </div>
-        <div className="flex justify-center items-center space-x-1">
+        <div className="flex items-center justify-center space-x-1">
           <IconToolTip
             href="https://github.com/peachfuzz"
             icon={<GitHubIcon />}

@@ -18,9 +18,9 @@ export function LogoSection({
     </p>
   );
   return (
-    <div className="not-prose relative bg-slate-50 rounded-xl dark:bg-gray-800">
+    <div className="not-prose relative rounded-xl bg-slate-50 dark:bg-gray-800">
       <div className="flex sm:block sm:overflow-visible">
-        <div className="flex items-center justify-around gap-12 sm:gap-4 font-mono font-bold p-4">
+        <div className="flex items-center justify-around gap-12 p-4 font-mono font-bold sm:gap-4">
           <IconText sectionOne={logo} sectionTwo={message} />
         </div>
       </div>

@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen`}>
-        <div className="flex flex-col h-screen justify-between">
+        <div className="flex h-screen flex-col justify-between">
           <Header />
           {children}
           <Footer />

@@ -64,7 +64,7 @@ export default function Calculator() {
 
   return (
     <main className="mb-auto flex flex-col items-center p-6 md:p-24">
-      <div className="max-w-4xl flex flex-col space-y-4">
+      <div className="flex max-w-4xl flex-col space-y-4">
         <div>
           <div className="flex space-x-1">
             <h1 className="text-5xl">Euclidean Algorithm</h1>
@@ -81,7 +81,7 @@ export default function Calculator() {
           <p>Note: if you do not enter a number, the default values for both numbers are 1.</p>
         </div>
 
-        <div className="grid gap-6 mb-6 md:grid-cols-2">
+        <div className="mb-6 grid gap-6 md:grid-cols-2">
           <NumberInput id="number_one" label="Number ☝🏽" value={numberOne} onChange={setNumberOne} />
           <NumberInput id="number_two" label="Number ✌🏽" value={numberTwo} onChange={setNumberTwo} />
           <Toggle id="show_table" label="Show table" checked={showTable} onChange={() => setShowTable((t) => !t)} />

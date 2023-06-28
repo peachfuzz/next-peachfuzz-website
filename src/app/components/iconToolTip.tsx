@@ -17,7 +17,7 @@ export function IconToolTip({
         href={href}
         target="_blank"
         data-tooltip-target={`tooltip-${iconName}`}
-        className="inline-flex justify-center p-2 rounded-lg cursor-pointer dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+        className="inline-flex cursor-pointer justify-center rounded-lg p-2 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
       >
         {icon}
         <span className="sr-only">{iconName}</span>
@@ -25,7 +25,7 @@ export function IconToolTip({
       <div
         id={`tooltip-${iconName}`}
         role="tooltip"
-        className="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700"
+        className="tooltip invisible absolute z-10 inline-block rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300 dark:bg-gray-700"
       >
         {toolTip}
         <div className="tooltip-arrow" data-popper-arrow></div>

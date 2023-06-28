@@ -24,7 +24,7 @@ export function Country({
   };
 
   return (
-    <div className="mt-6 space-y-4 flex flex-col items-center">
+    <div className="mt-6 flex flex-col items-center space-y-4">
       <div className="mt-6 text-3xl">{name}</div>
       <Map
         countryData={updatedCountryData}
