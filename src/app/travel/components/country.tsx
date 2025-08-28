@@ -5,12 +5,14 @@ import { UpdatedMapEntry } from '../../types/mapDataTypes';
 import { MapLegend } from './mapLegend';
 
 export function Country({
+  countryIndex,
   data,
   name,
   capitalLocation = <></>,
   viewBox,
   translate = false,
 }: {
+  countryIndex: number;
   data: UpdatedMapEntry[];
   name: string;
   capitalLocation?: JSX.Element;
@@ -27,7 +29,7 @@ export function Country({
   };
 
   return (
-    <div className="mt-6 flex flex-col items-center space-y-4" translate={translate ? 'yes' : 'no'}>
+    <div className="mt-6 flex flex-col items-center space-y-4" translate={translate ? 'yes' : 'no'} key={countryIndex}>
       <div className="mt-6 text-3xl">{name}</div>
       <Map
         countryData={updatedCountryData}
