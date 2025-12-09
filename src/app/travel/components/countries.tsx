@@ -4,14 +4,20 @@ import { Country } from './country';
 import Link from 'next/link';
 
 export default function Countries() {
+  const continentCount = new Set(countries.map((item) => item.continent)).size;
   return (
     <>
-      <p>I've been to {countries.length} countries! Here's the full list in the order I've first visited them:</p>
+      <p>
+        I&apos;ve been to {countries.length} countries! That&apos;s {continentCount} continents!
+      </p>
+      <p>Here&apos;s the full list in the order I&apos;ve first visited them:</p>
       <div>
         <ol type="1">
-          {countries.map(({ name }) => (
-            <li>
-              <Link href={'travel#' + name}>{name}</Link>
+          {countries.map(({ name, continent }, index) => (
+            <li key={name}>
+              <Link href={'travel#' + name}>
+                {name} - {continent}
+              </Link>
             </li>
           ))}
         </ol>
