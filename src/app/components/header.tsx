@@ -22,6 +22,10 @@ const linkData = [
     pageName: 'Travel',
     pathName: '/travel',
   },
+  // {
+  //   pageName: 'Family',
+  //   pathName: '/family',
+  // },
 ];
 
 {
@@ -53,7 +57,7 @@ export function Header() {
   };
 
   return (
-    <nav className="bg-slate-200 dark:bg-gray-950">
+    <nav className="bg-slate-200 dark:bg-gray-900">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
