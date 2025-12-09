@@ -9,7 +9,7 @@ export function MapLegend({
   onHover: (index: number) => void;
 }) {
   return (
-    <div className="grid grid-cols-3 place-items-center gap-4 rounded-lg bg-slate-200 p-3 dark:bg-gray-950 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
+    <div className="grid grid-cols-3 place-items-center gap-4 rounded-lg bg-slate-200 p-3 dark:bg-gray-900 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
       {countryData.map(({ name, abbreviation, hovered, visited }, index) => (
         <div
           data-state={abbreviation}

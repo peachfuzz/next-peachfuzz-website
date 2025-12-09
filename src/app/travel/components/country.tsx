@@ -30,7 +30,9 @@ export function Country({
 
   return (
     <div className="mt-6 flex flex-col items-center space-y-4" translate={translate ? 'yes' : 'no'} key={countryIndex}>
-      <div className="mt-6 text-3xl">{name}</div>
+      <div className="mt-6 text-3xl" id={name}>
+        {name}
+      </div>
       <Map
         countryData={updatedCountryData}
         onHover={updateStateData}
