@@ -22,15 +22,10 @@ const linkData = [
     pageName: 'Travel',
     pathName: '/travel',
   },
-  // {
-  //   pageName: 'Family',
-  //   pathName: '/family',
-  // },
 ];
 
-{
-  /* todo: add aria-current to all links(?) */
-}
+/* todo: add aria-current to all links(?) */
+
 const getLinks = (cssClasses: string, pathName: string) => (
   <>
     {linkData.map((data) => (

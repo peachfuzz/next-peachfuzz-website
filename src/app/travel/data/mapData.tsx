@@ -2260,7 +2260,6 @@ export const countries = [
     continent: 'Asia',
   },
   {
-    // https://simplemaps.com/uk
     data: [
       {
         drawing:

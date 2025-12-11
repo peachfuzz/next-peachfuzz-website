@@ -1,4 +1,3 @@
-// import { usa, mexico, australia, colombia, canada, vietnam, thailand } from '../data/mapData';
 import { countries } from '../data/mapData';
 import { Country } from './country';
 import Link from 'next/link';
@@ -22,17 +21,7 @@ export default function Countries() {
           ))}
         </ol>
       </div>
-      {
-        <Country
-          countryIndex={0}
-          data={countries[0].data}
-          name={countries[0].name}
-          viewBox={countries[0].viewBox}
-          translate={countries[0].translate}
-          capitalLocation={countries[0].capitalLocation}
-        />
-      }
-      {/* {countries.map(({ data, name, viewBox, translate, capitalLocation }, index) => (
+      {countries.map(({ data, name, viewBox, translate, capitalLocation }, index) => (
         <Country
           key={index}
           countryIndex={index}
@@ -42,7 +31,7 @@ export default function Countries() {
           translate={translate}
           capitalLocation={capitalLocation}
         />
-      ))} */}
+      ))}
     </>
   );
 }
