@@ -13,7 +13,8 @@ export function Map({
   viewBox: string;
 }) {
   return (
-    <div className="flex max-h-[25rem] min-w-full items-center justify-center">
+    <div className="w-2/3">
+      {/* <div className="flex max-h-96 min-w-full items-center justify-center"> */}
       <svg height="100%" viewBox={viewBox}>
         <g>
           {countryData.map(({ abbreviation, drawing, hovered, visited }, index) => (
