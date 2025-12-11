@@ -23,16 +23,14 @@ export default function Countries() {
         </ol>
       </div>
       {countries.map(({ data, name, viewBox, translate, capitalLocation }, index) => (
-        <>
-          <Country
-            countryIndex={index}
-            data={data}
-            name={name}
-            viewBox={viewBox}
-            translate={translate}
-            capitalLocation={capitalLocation}
-          />
-        </>
+        <Country
+          countryIndex={index}
+          data={data}
+          name={name}
+          viewBox={viewBox}
+          translate={translate}
+          capitalLocation={capitalLocation}
+        />
       ))}
     </>
   );
