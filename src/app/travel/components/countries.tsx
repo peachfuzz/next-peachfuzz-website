@@ -24,6 +24,7 @@ export default function Countries() {
       </div>
       {countries.map(({ data, name, viewBox, translate, capitalLocation }, index) => (
         <Country
+          key={index}
           countryIndex={index}
           data={data}
           name={name}
