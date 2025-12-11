@@ -22,7 +22,17 @@ export default function Countries() {
           ))}
         </ol>
       </div>
-      {countries.map(({ data, name, viewBox, translate, capitalLocation }, index) => (
+      {
+        <Country
+          countryIndex={0}
+          data={countries[0].data}
+          name={countries[0].name}
+          viewBox={countries[0].viewBox}
+          translate={countries[0].translate}
+          capitalLocation={countries[0].capitalLocation}
+        />
+      }
+      {/* {countries.map(({ data, name, viewBox, translate, capitalLocation }, index) => (
         <Country
           key={index}
           countryIndex={index}
@@ -32,7 +42,7 @@ export default function Countries() {
           translate={translate}
           capitalLocation={capitalLocation}
         />
-      ))}
+      ))} */}
     </>
   );
 }
